@@ -8,7 +8,6 @@ const campaign: React.FC = () => {
   return (
     <CampaignsProvider>
       <NavBar />
-
       <CardCampaign />
     </CampaignsProvider>
   );
