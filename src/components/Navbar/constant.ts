@@ -4,11 +4,11 @@ export const menus = [
     value: "GETALLCAMPAIGNS",
   },
   {
-    title: "All Campaign",
-    value: "GETALLCAMPAIGNS",
+    title: "By Bonation Target",
+    value: "SORTDONATIONTARGET",
   },
   {
-    title: "All Campaign",
-    value: "GETALLCAMPAIGNS",
+    title: "Day Left",
+    value: "SORTDAYLEFT",
   },
 ];

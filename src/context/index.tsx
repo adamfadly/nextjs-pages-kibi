@@ -29,14 +29,13 @@ const reducer = (state: CampaignsState, action: any) => {
       const sortCampaignDonation = action?.payload?.data.sort((a: T_Campaign, b: T_Campaign) => {
         return a.donation_target - b.donation_target;
       });
-      console.log(sortCampaignDonation, "UUUUUU");
       return {
         ...state,
         dataCampaigns: sortCampaignDonation,
       };
     case "SORTDAYLEFT":
       const sortCampaignDayLeft = action?.payload?.data.sort((a: T_Campaign, b: T_Campaign) => {
-        return a.donation_target - b.donation_target;
+        return a.expired - b.expired;
       });
       return {
         ...state,

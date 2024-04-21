@@ -1,16 +1,16 @@
 import React, { useEffect, useContext, useState } from "react";
 import { CampaignsCTX } from "@/context";
-import { T_Campaign } from "@/types/campaigns.model";
 import CardCampaign from "@/components/Campaigns";
-type Props = {};
+import { T_Campaign } from "@/types/campaigns.model";
+type T_PropsCampaign = {
+  data: T_Campaign[];
+};
 
-const CampaignContainer = (props: Props) => {
+const CampaignContainer: React.FC<T_PropsCampaign> = (props) => {
   const { state, dispatch } = useContext(CampaignsCTX);
-  const [campaign, setCampaign] = useState<any>([]);
   useEffect(() => {
     const fetchDataAndDispatch = async () => {
       await dispatch({ type: "GETALLCAMPAIGNS", payload: props });
-      await setCampaign(state);
     };
     fetchDataAndDispatch();
   }, [props]);

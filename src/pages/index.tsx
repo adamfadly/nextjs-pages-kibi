@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import { GetServerSideProps } from "next";
 import { CampaignsProvider } from "@/context/index";
-import { GetAllCampaignsResponse } from "@/types/campaigns.model";
 
 import { fetchData } from "@/services/getAllCampaigns";
 import NavBar from "@/components/Navbar";
@@ -13,7 +12,6 @@ export default function Home({ data }: any) {
       <CampaignsProvider>
         <NavBar data={data} />
         <main className={``}>
-          {/* @ts-ignore */}
           <CampaignContainer data={data} />
         </main>
       </CampaignsProvider>
