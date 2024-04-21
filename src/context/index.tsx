@@ -20,11 +20,10 @@ export const CampaignsCTX = createContext<any>(null);
 const reducer = (state: CampaignsState, action: any) => {
   switch (action.type) {
     case "GETALLCAMPAIGNS":
-      console.log(action, "ACT");
       return {
         ...state,
         loading: false,
-        dataCampaigns: action.payload,
+        dataCampaigns: action?.payload?.data,
       };
     case "SORTDONATIONTARGET":
       const sortCampaignDonation = action?.payload?.data.sort((a: T_Campaign, b: T_Campaign) => {

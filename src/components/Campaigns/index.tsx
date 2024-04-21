@@ -11,19 +11,11 @@ interface CardCampaignProps {
 }
 
 const CardCampaign: React.FC<CardCampaignProps> = (props) => {
-  const [campaign, setCampaign] = useState<any>([]);
-  // console.log(props.data, "PPPPPP");
-  console.log(campaign, "PPPPPP");
-
-  useEffect(() => {
-    setCampaign(props?.data?.dataCampaigns);
-  }, [props]);
-
   return (
     <>
       <div className="flex flex-wrap items-center justify-center gap-6 p-4">
-        {campaign &&
-          campaign?.data?.map((campaign: T_Campaign, index: number) => (
+        {
+          props?.data?.dataCampaigns?.map((campaign: T_Campaign, index: number) => (
             <div key={index} className="max-w-sm shadow-lg rounded-lg overflow-hidden relative">
               <div className="absolute top-0 left-0 rounded-tl-lg rounded-br-lg bg-gray-400 px-2 py-1">
                 <span className="block text-xs font-semibold leading-3 text-cerulean-80">12 hari lagi</span>
