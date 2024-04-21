@@ -13,8 +13,7 @@ const CampaignContainer = (props: Props) => {
       await setCampaign(state);
     };
     fetchDataAndDispatch();
-  }, []);
-  console.log(campaign, "QQQQ");
+  }, [props]);
   return (
     <div>
       <CardCampaign data={state} />

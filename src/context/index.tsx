@@ -20,6 +20,7 @@ export const CampaignsCTX = createContext<any>(null);
 const reducer = (state: CampaignsState, action: any) => {
   switch (action.type) {
     case "GETALLCAMPAIGNS":
+      console.log(action, "ACT");
       return {
         ...state,
         loading: false,
