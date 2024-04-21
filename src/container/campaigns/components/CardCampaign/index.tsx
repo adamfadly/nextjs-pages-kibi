@@ -1,8 +1,4 @@
 import React from "react";
-import { T_Campaign } from "@/types/campaigns.model";
-import { useProps, T_CampaignCTX } from "../../context";
-import ProgressBar from "./components/ProgressBar";
-// import TitleSection from "./components/TitleSection";
 import { currencyFormatter } from "@/utils/currencyFormater";
 
 const lengthProgress = (currentDonation: number, donationTarget: number): number => {
@@ -11,8 +7,6 @@ const lengthProgress = (currentDonation: number, donationTarget: number): number
 };
 
 const CardCampaign: React.FC = () => {
-  const { dataCampaigns } = useProps() as T_CampaignCTX;
-
   return (
     <>
       <div className=" max-w-sm shadow-lg rounded-lg overflow-hidden relative">
@@ -31,8 +25,6 @@ const CardCampaign: React.FC = () => {
             </span>
             <div className="relative flex items-center">
               <div className="h-[12px]">
-                {/* <img src="https://assets.kitabisa.com/images/icon__verified-user.svg" alt="" /> */}
-                {/* <img src={campaign.campaignerBadge} alt="" /> */}
                 <svg
                   width="12"
                   height="12"
