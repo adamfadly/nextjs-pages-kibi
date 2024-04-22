@@ -1,40 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Kitabisa FE code challenges
+
+Welcome to your FE kitabisa code challenges! This guide will help you set up running the app. ensuring you have everything you need
+
+## Prerequisites
+
+Before getting started, make sure you have the following installed on your machine:
+
+- Node.js (version 12 or higher)
+- npm or Yarn
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the Repo**: If you haven't already created a Next.js project, you can do so by running the following command:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+    git clone git@github.com:adamfadly/nextjs-pages-kibi.git
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Intsall npm or yarn**:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+   ```bash
+   npm install
+   ```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+3. **Start the development server**:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   This command will start the development server and open your project in your default web browser.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+Your Next.js project should have the following directory structure:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **`pages/`**: Contains your application's routes and views.
+- **`public/`**: Stores static assets like images, fonts, and other files.
+- **`styles/`**: Holds global styles or styling variables.
+- **`components/`**: Houses reusable UI components.
+- **`container/`**: All the view as present of page view
+- **`context/`**: The state management store data
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Styling App
 
-## Deploy on Vercel
+- **`Tailwind css`** - [Tailwind Documentation](https://tailwindcss.com/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Additional Info
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+to get the data i approach using `getServerSideProps` to fetch data and render the contents of a page at request time. then store into context.
